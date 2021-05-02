@@ -1,7 +1,5 @@
-int v=0;
+int v=0,operation=0,v2=0;
 void setup(){
-int l=9;
-int x=80,y=350;
 size(600,600);
 background(20,150,100);
 noStroke();
@@ -151,6 +149,7 @@ text("C",80+20,380+165);
 }
 }
 void mousePressed(){
+  if (operation==0){
   fill(200,195,30);
 rect(20,20,560,100);
 if(mouseButton==LEFT && mouseX>80 && mouseY>350 && mouseX<130 && mouseY<400){
@@ -184,18 +183,174 @@ if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+165 && mouseX<13+550 && mouse
   v=v*10+0;
 }
 if(mouseButton==LEFT && mouseX>80+165 && mouseY>350 && mouseX<130+165 && mouseY<400){
-  println("+");
+  operation=1;
 }
 if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mouseY<400+55){
-  println("-");
+  operation=2;
 }
 if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
-  println("/");
+  operation=3;
 }
 if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
 v=0;
+v2=0;
+operation=0;
 }
 fill(0);
 textSize(50);
 text(v,30,100);
+}
+if (operation==1){
+    fill(200,195,30);
+rect(20,20,560,100);
+if(mouseButton==LEFT && mouseX>80 && mouseY>350 && mouseX<130 && mouseY<400){
+  v2=v2*10+9;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350 && mouseX<130+55 && mouseY<400){
+  v2=v2*10+8;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350 && mouseX<130+110 && mouseY<400){
+  v2=v2*10+7;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+55 && mouseX<130 && mouseY<400+55){
+  v2=v2*10+6;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+55 && mouseX<130+55 && mouseY<400+55){
+  v2=v2*10+5;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+55 && mouseX<130+110 && mouseY<400+55){
+  v2=v2*10+4;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+110 && mouseX<130 && mouseY<400+110){
+  v2=v2*10+3;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+110 && mouseX<130+55 && mouseY<400+110){
+  v2=v2*10+2;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+110 && mouseX<130+110 && mouseY<400+110){
+  v2=v2*10+1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+165 && mouseX<13+550 && mouseY<400+165){
+  v2=v2*10+0;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350 && mouseX<130+165 && mouseY<400){
+  operation=1;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mouseY<400+55){
+  operation=2;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
+  operation=3;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
+v=0;
+v2=0;
+operation=0;
+}
+fill(0);
+textSize(50);
+text(v2,30,100);
+}
+if (operation==2){
+  fill(200,195,30);
+rect(20,20,560,100);
+if(mouseButton==LEFT && mouseX>80 && mouseY>350 && mouseX<130 && mouseY<400){
+  v2=v2*10+9;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350 && mouseX<130+55 && mouseY<400){
+  v2=v2*10+8;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350 && mouseX<130+110 && mouseY<400){
+  v2=v2*10+7;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+55 && mouseX<130 && mouseY<400+55){
+  v2=v2*10+6;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+55 && mouseX<130+55 && mouseY<400+55){
+  v2=v2*10+5;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+55 && mouseX<130+110 && mouseY<400+55){
+  v2=v2*10+4;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+110 && mouseX<130 && mouseY<400+110){
+  v2=v2*10+3;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+110 && mouseX<130+55 && mouseY<400+110){
+  v2=v2*10+2;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+110 && mouseX<130+110 && mouseY<400+110){
+  v2=v2*10+1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+165 && mouseX<13+550 && mouseY<400+165){
+  v2=v2*10+0;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350 && mouseX<130+165 && mouseY<400){
+  operation=1;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mouseY<400+55){
+  operation=2;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
+  operation=3;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
+v=0;
+v2=0;
+operation=0;
+}
+fill(0);
+textSize(50);
+text(v2,30,100);
+}
+if (operation==3){
+  fill(200,195,30);
+rect(20,20,560,100);
+if(mouseButton==LEFT && mouseX>80 && mouseY>350 && mouseX<130 && mouseY<400){
+  v2=v2*10+9;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350 && mouseX<130+55 && mouseY<400){
+  v2=v2*10+8;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350 && mouseX<130+110 && mouseY<400){
+  v2=v2*10+7;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+55 && mouseX<130 && mouseY<400+55){
+  v2=v2*10+6;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+55 && mouseX<130+55 && mouseY<400+55){
+  v2=v2*10+5;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+55 && mouseX<130+110 && mouseY<400+55){
+  v2=v2*10+4;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+110 && mouseX<130 && mouseY<400+110){
+  v2=v2*10+3;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+110 && mouseX<130+55 && mouseY<400+110){
+  v2=v2*10+2;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+110 && mouseX<130+110 && mouseY<400+110){
+  v2=v2*10+1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+165 && mouseX<13+550 && mouseY<400+165){
+  v2=v2*10+0;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350 && mouseX<130+165 && mouseY<400){
+  operation=1;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mouseY<400+55){
+  operation=2;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
+  operation=3;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
+v=0;
+v2=0;
+operation=0;
+}
+fill(0);
+textSize(50);
+text(v2,30,100);
+}
 }
