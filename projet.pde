@@ -1,4 +1,6 @@
-int v=0,operation=0,v2=0,result=0,resultat=0;
+int v=0,operation=0,v2=0,result=0,resultat=0, n=1;
+boolean virg=false;
+float vd;
 void setup(){
 size(600,600);
 background(20,150,100);
@@ -224,8 +226,12 @@ if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mous
 if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
   operation=3;
 }
-if (mouseX>245 && mouseY>295 && mouseX<245+50 && mouseY<295+50){
+if (mouseButton==LEFT && mouseX>245 && mouseY>295 && mouseX<245+50 && mouseY<295+50){
 operation=4;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+165 && mouseX<130+110 && mouseY<400+165){
+vd=v;
+virg=true;
 }
 if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
 v=0;
@@ -238,6 +244,76 @@ fill(0);
 textSize(50);
 text(v,30,100);
 }
+/*if(virg==true){
+  fill(200,195,30);
+rect(20,20,560,100);
+if(mouseButton==LEFT && mouseX>80 && mouseY>350 && mouseX<130 && mouseY<400){
+  vd=vd+9*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350 && mouseX<130+55 && mouseY<400){
+  vd=vd+8*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350 && mouseX<130+110 && mouseY<400){
+  vd=vd+7*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+55 && mouseX<130 && mouseY<400+55){
+  vd=vd+6*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+55 && mouseX<130+55 && mouseY<400+55){
+  vd=vd+5*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+55 && mouseX<130+110 && mouseY<400+55){
+  vd=vd+4*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>350+110 && mouseX<130 && mouseY<400+110){
+  vd=vd+3*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+110 && mouseX<130+55 && mouseY<400+110){
+  vd=vd+2*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+110 && mouseY>350+110 && mouseX<130+110 && mouseY<400+110){
+  vd=vd+1*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+55 && mouseY>350+165 && mouseX<130+55 && mouseY<400+165){
+  vd=vd+0*pow(10,-n);
+  n+=1;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350 && mouseX<130+165 && mouseY<400){
+  operation=1;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+55 && mouseX<130+165 && mouseY<400+55){
+  operation=2;
+}
+if(mouseButton==LEFT && mouseX>80+165 && mouseY>350+110 && mouseX<130+165 && mouseY<400+110){
+  operation=3;
+}
+if (mouseButton==LEFT && mouseX>245 && mouseY>295 && mouseX<245+50 && mouseY<295+50){
+operation=4;
+}
+if(mouseButton==LEFT && mouseX>80 && mouseY>515 && mouseX<80+55 && mouseY<515+55){
+v=0;
+v2=0;
+operation=0;
+result=0;
+resultat=0;
+virg=false;
+n=1;
+vd=0;
+}
+fill(0);
+textSize(50);
+text(vd,30,100);
+}*/
+
 else if (operation==1){
     fill(200,195,30);
 rect(20,20,560,100);
